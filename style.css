@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wghhreft@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: white;
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.hdqwalls.com/wallpapers/digital-nature-blue-4k-g8.jpg");
+  color: white;
+}
+
+.header h2 {
+  color: aqua;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-left: 10%;
+  padding-right: 10%;
+  position: fixed;
+  background-color: black;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-style: italic;
+
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  animation: bounce;
+  animation-duration: 2s;
+}
+
+nav ul li a:hover {
+  color: white;
+  transition: 0.3s all ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  transform-origin: bottom right;
+  background-color: aqua;
+  transition: transform 0.5s ease-out;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+section {
+  padding: 15rem 10%;
+  min-height: 100vh;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: -3.2rem;
+}
+
+.home-bio h1 {
+  font-size: 4rem;
+  line-height: 1.4p;
+
+}
+
+.home-bio p {
+  font-size: 1rem;
+  padding-left: 0;
+  padding-right: 2rem;
+
+}
+
+.home-bio h2 {
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+span {
+  color: aqua;
+}
+
+.profile-pic img {
+  width: 20vw;
+  border-radius: 20%;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.social-media a {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  margin: 1rem 1rem 2rem 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s ease;
+
+}
+
+.social-media a:hover {
+  color: aqua;
+  box-shadow: 0 0 1rem aqua;
+}
+
+.btn {
+  display: inline-block;
+  background: aqua;
+  margin: 2rem 0;
+  padding: 1rem 2.5rem;
+  border-radius: 10%;
+  font-size: 1.3rem;
+  color: black;
+  font-weight: 500;
+  transition: 0.5 ease;
+}
+
+.btn:hover {
+  color: aqua;
+  background: black;
+  box-shadow: 0 0 1rem aqua;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.heading h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0;
+  padding-bottom: 0;
+  padding-top: 2rem;
+}
+
+.about-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.about-resume img {
+  display: flex;
+  height: 45vh;
+  margin-bottom: 20px;
+
+}
+
+.resume-btn {
+  display: inline-block;
+  background: aqua;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  border-radius: 10%;
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+  transition: 0.5 ease;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-btn:hover {
+  color: aqua;
+  background: black;
+  box-shadow: 0 0 1rem aqua;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.skills-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.skill-card:hover {
+  border-radius: 1rem solid;
+  transform: scale(1.1);
+}
+
+.skill-card .bx {
+  font-size: 8rem;
+  transition: 0.5s ease;
+}
+
+.skill-card .bx:hover {
+  color: aqua;
+}
+
+.skill-card h3 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.skill-card p {
+  text-align: center;
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
+
+.projects {
+  margin-top: 0;
+  padding-top: 2.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projects-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.project-card {
+  position: relative;
+  height: 25rem;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.project-name {
+  text-align: center;
+  font-size: 1.5rem;
+
+}
+
+.project-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card-overlay:hover {
+  background: rgba(0, 0, 0, 0);
+  color: black;
+  transition: 0.5s all linear;
+
+
+}
+
+.card-overlay .bx {
+  color: white;
+  font-size: 1.8rem;
+  padding: 1.1rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.8rem;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.card-overlay .bx:hover {
+  transform: scale(1.2);
+  color: aqua;
+  background: black;
+  box-shadow: 0 0 2rem aqua;
+
+}
+
+.contact {
+  margin-top: 0;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.contact h2 {
+  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+
+form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+form input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  resize: none;
+  background-color: #C0C0C0;
+
+}
+
+.footer {
+  padding: 2rem 10%;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer p {
+  padding-bottom: -1rem;
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+hr {
+  margin: 1rem;
+  border-bottom: thin solid white;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 2rem 4%;
+  }
+
+  .profile-pic img {
+    margin-top: 3rem;
+    width: 50vw;
+  }
+
+  .about-resume img {
+    width: 20vw;
+    height: 20vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.9);
+
+  }
+
+  .about {
+    padding-top: 2rem;
+  }
+
+  .skills {
+    padding-top: 4rem;
+  }
+
+  .projects {
+    padding-top: 4rem;
+  }
+
+  .contact {
+    margin-top: 0;
+    padding-top: 4.5rem;
+  }
+
+  .resume-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home,
+  .about-items {
+    flex-direction: column;
+  }
+
+  .skills-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-resume img {
+    display: flex;
+    height: 50vh;
+    width: 30vw;
+    margin-bottom: 20px;
+
+  }
+}
+
+@media (max-width: 620px) {
+  .skills-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-resume img {
+    display: flex;
+    height: 50vh;
+    width: 30vw;
+    margin-bottom: 20px;
+
+  }
+}
+
+@media (max-width: 620px) {
+  .skills-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-resume img {
+    display: flex;
+    height: 50vh;
+    width: 30vw;
+    margin-bottom: 20px;
+
+  }
+}
+
+@media (max-width: 450px) {
+  nav ul li {
+    height: 0;
+    display: flex;
+    text-align: left;
+    align-items: left;
+  }
+
+  nav {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .about-resume img {
+    display: flex;
+    justify-content: justify-between;
+    height: 35vh;
+    width: 50vw;
+    margin-bottom: 20px;
+
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: none;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0;
+    bottom: -5px;
+    left: 0;
+    transform-origin: bottom right;
+    background-color: white;
+
+  }
+
+  .projects-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-overlay:hover {
+    background: transparent;
+    color: white;
+    transition: 0.5s all linear;
+
+
+  }
+}
