@@ -333,7 +333,7 @@ span {
 }
 
 .card-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: transparent; 
   position: absolute;
   left: 0;
   top: 0;
@@ -347,12 +347,11 @@ span {
 }
 
 .card-overlay:hover {
-  background: rgba(0, 0, 0, 0);
+  background: transparent; 
   color: black;
   transition: 0.5s all linear;
-
-
 }
+
 
 .card-overlay .bx {
   color: white;
